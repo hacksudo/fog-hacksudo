@@ -1,3 +1,6 @@
 #!/bin/bash
-hydra -h
-hydra -L user.txt -P pass.lst IP ftp,ssh,http
+echo "enter your target ip:"
+read ans
+export user=user.txt
+export pass=dict.lst
+hydra -L $user -P $pass $ans ftp
